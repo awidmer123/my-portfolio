@@ -1,37 +1,53 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
-async function getPhotos() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/photos`, {
+async function getAlbums() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/albums`, {
     cache: 'no-store',
   });
   return res.json();
 }
 
+async function getCoverPhoto(folder) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/albums/${folder}`, {
+    cache: 'no-store',
+  });
+  const photos = await res.json();
+  return photos[0] || null;
+}
+
 export default async function Home() {
-  const photos = await getPhotos();
+  const albums = await getAlbums();
+  const albumsWithCovers = await Promise.all(
+    albums.map(async (album) => {
+      const cover = await getCoverPhoto(album.name);
+      return { ...album, cover };
+    })
+  );
 
   return (
     <main className="p-8">
       <h1 className="text-4xl font-bold mb-2">My Portfolio</h1>
       <p className="text-gray-500 mb-8">A collection of my photography</p>
 
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-        {photos.map((photo) => (
-          <div key={photo.asset_id} className="break-inside-avoid rounded-xl overflow-hidden shadow-md">
-            <Image
-              src={photo.secure_url}
-              alt={photo.display_name}
-              width={photo.width}
-              height={photo.height}
-              className="w-full object-cover"
-            />
-            <div className="p-4 bg-white flex items-center justify-between">
-              <h2 className="font-semibold text-lg capitalize">{photo.display_name}</h2>
-              <a href={`${photo.secure_url}?fl_attachment=true`} download={true} className="bg-black text-white text-sm px-4 py-2 rounded-full hover:bg-gray-800 transition">
-                Download
-              </a>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {albumsWithCovers.map((album) => (
+          <Link key={album.name} href={`/albums/${album.name}`}>
+            <div className="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer">
+              {album.cover && (
+                <Image
+                  src={album.cover.secure_url}
+                  alt={album.name}
+                  width={album.cover.width}
+                  height={album.cover.height}
+                  className="w-full h-64 object-cover"
+                />
+              )}
+              <div className="p-4 bg-white">
+                <h2 className="font-semibold text-lg capitalize">{album.name.replace(/-/g, ' ')}</h2>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </main>

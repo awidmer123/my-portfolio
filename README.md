@@ -1,12 +1,12 @@
 # 📷 My Photography Portfolio
 
 A personal photography portfolio built with Next.js and Cloudinary.
-Created and maintained by Andri & his father.
+Created and maintained by me (and my father).
 
 ## About
-Photography is more than just taking pictures — it's about capturing moments,
-telling stories, and sharing a perspective on the world.
-This portfolio is our way of sharing that passion.
+This portfolio is our little corner of the internet
+to share what we capture, built entirely from scratch to learn new skills and stay
+independent from big social media platforms. We're absolutely non-professionals - neither in coding nor in photography.
 
 ## Features
 - 📁 Albums — photos organised by trip or project

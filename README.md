@@ -24,7 +24,9 @@ independent from big social media platforms. We're absolutely non-professionals 
 - [Vercel](https://vercel.com/) — hosting
 
 ## Running locally
-\`\`\`bash
+## Running locally
+
+```bash
 npm install
 npm run dev
-\`\`\`
+```

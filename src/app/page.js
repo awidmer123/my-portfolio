@@ -33,7 +33,7 @@ export default async function Home() {
         <h1 className="text-4xl font-bold mb-6">Some of my least bad shots</h1>
         <div className="space-y-4 text-gray-700 leading-relaxed max-w-2xl">
           <p>
-            I'm based in Switzerland and photography is one of those hobbies I truly enjoy, yet somehow never do enough of, since I am, as all of my generation, addicted to screens and basically got no time to do anything else than doomscrolling. I also feel a need to share something with the world that is less unsettling than the current political climate or the various crises we face. I didn't like the idea of an instagram page, so there you go. Here you can find my best, or alternatively least bad, shots so far. I hope you find something nice and aesthetic.
+            I'm a bioinformatician and computational biology student based in Switzerland that pretends to have a hobby to keep up his image of not being too nerdy. Photography is one of those things I enjoy, yet somehow never do enough of, since I am, as all of my generation, addicted to screens and basically got no time to do anything else than doomscrolling. I also feel a need to share something with the world that is less unsettling than the current political climate or the various crises we face. I didn't like the idea of an instagram page, so there you go. Here you can find my best, or alternatively least bad, shots so far. I hope you find something nice and aesthetic.
             With this project I'm hoping to change that, giving myself a reason to pick up the camera more regularly.
             A little self-imposed push, if you will (Eeeeew that sounds almost like one of those hypocritical alpha-male-life-coaches).
           </p>

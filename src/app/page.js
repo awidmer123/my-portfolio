@@ -44,6 +44,9 @@ export default async function Home() {
             This website is a side project I built to learn web development, share my favourite shots, and have my own
             little space on the internet. Always a work in progress.
           </p>
+          <p>
+          At the bottom of the page you find a link to the github repo.
+          </p>
         </div>
       </section>
 

@@ -30,19 +30,19 @@ export default async function Home() {
 
       {/* About section */}
       <section className="mb-12">
-        <h1 className="text-4xl font-bold mb-6">My Portfolio</h1>
+        <h1 className="text-4xl font-bold mb-6">Some of my least bad shots</h1>
         <div className="space-y-4 text-gray-700 leading-relaxed max-w-2xl">
           <p>
-            I'm based in Switzerland and photography is one of those hobbies I truly enjoy, yet somehow never do enough of.
+            I'm based in Switzerland and photography is one of those hobbies I truly enjoy, yet somehow never do enough of, since I am, as all of my generation, addicted to screens and basically got no time to do anything else than doomscrolling. I also feel a need to share something with the world that is less unsettling than the current political climate or the various crises we face. I didn't like the idea of an instagram page, so there you go. Here you can find my best, or alternatively least bad, shots so far. I hope you find something nice and aesthetic.
             With this project I'm hoping to change that, giving myself a reason to pick up the camera more regularly.
-            A little self-imposed push, if you will.
+            A little self-imposed push, if you will (Eeeeew that sounds almost like one of those hypocritical alpha-male-life-coaches).
           </p>
           <p>
-            No professional here. My photos are unedited and straight from the camera, which is exactly how I want it. I love being outside and capturing moments consciously.
+            No professional here. My photos are unedited and straight from the camera, which is exactly how I want it (I am a lazy f*** who does neither have the money for proper software nor the skills to edit photos). I love being outside and capturing moments consciously ("consciously": Just hoping to get the settings right enough on an analog camera with a broken photosensor (Konica AF) to see at least something. For sure with the other cameras it is a bit less of a hassle.).
           </p>
           <p>
-            This website is a side project I built to learn web development, share my favourite shots, and have my own
-            little space on the internet. Always a work in progress.
+            This website is a side project I built to learn web development (for a potential future employer), share my favourite shots, and have my own
+            little space on the internet. Always a work in progress (Yes, like every 6 month I got some free time and change something minor). Claude is my best friend    and helps with the necessary technical support.
           </p>
           <p>
           At the bottom of the page you find a link to the github repo.

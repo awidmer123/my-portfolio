@@ -33,23 +33,16 @@ export default async function Home() {
         <h1 className="text-4xl font-bold mb-6">My Portfolio</h1>
         <div className="space-y-4 text-gray-700 leading-relaxed max-w-2xl">
           <p>
-            I'm based in Switzerland and photography is one of those hobbies I truly enjoy — yet somehow never do enough of.
+            I'm based in Switzerland and photography is one of those hobbies I truly enjoy, yet somehow never do enough of.
             With this project I'm hoping to change that, giving myself a reason to pick up the camera more regularly.
             A little self-imposed push, if you will.
           </p>
           <p>
-            I love being outside and capturing moments consciously, slowing down rather than just snapping away.
-          </p>
-          <p>
-            No professional here. My photos are unedited and straight from the camera, which is exactly how I want it.
-            Honest moments, nothing more.
-          </p>
-          <p>
-            Occasionally you'll spot a shot taken by my father too — he shares the same passion.
+            No professional here. My photos are unedited and straight from the camera, which is exactly how I want it. I love being outside and capturing moments consciously.
           </p>
           <p>
             This website is a side project I built to learn web development, share my favourite shots, and have my own
-            little space on the internet — independent from big social media platforms. Always a work in progress, always learning.
+            little space on the internet. Always a work in progress.
           </p>
         </div>
       </section>
@@ -78,7 +71,17 @@ export default async function Home() {
           ))}
         </div>
       </section>
-
+            {/* Footer */}
+      <footer className="mt-16 pt-8 border-t border-gray-200 text-sm text-gray-400">
+        
+          <a href="https://github.com/awidmer123/my-portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-black transition"
+        >
+          View source on GitHub
+        </a>
+      </footer>
     </main>
   );
 }

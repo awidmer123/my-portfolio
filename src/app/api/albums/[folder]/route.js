@@ -10,6 +10,7 @@ export async function GET(request, { params }) {
   const { folder } = await params;
   const result = await cloudinary.search
     .expression(`folder:${folder}`)
+    .with_field('context') // <-- liefert die Context Fields mit
     .max_results(50)
     .execute();
   return Response.json(result.resources);

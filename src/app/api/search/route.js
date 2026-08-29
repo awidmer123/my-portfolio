@@ -7,9 +7,10 @@ cloudinary.config({
 });
 
 export async function GET() {
-  const result = await cloudinary.api.resources({
-    type: 'upload',
-    max_results: 20,
-  });
+  const result = await cloudinary.search
+    .expression('resource_type:image')
+    .with_field('context')
+    .max_results(500)
+    .execute();
   return Response.json(result.resources);
 }

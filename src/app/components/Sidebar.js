@@ -40,6 +40,10 @@ export default function Sidebar({ albums }) {
             Home
           </Link>
 
+          <Link href="/search" className="block text-gray-700 hover:text-black transition font-medium" onClick={() => setIsOpen(false)}>
+            Search
+          </Link>
+
           <div>
             <button
               className="w-full text-left text-gray-700 hover:text-black transition font-medium flex items-center justify-between"

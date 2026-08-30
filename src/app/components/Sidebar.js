@@ -32,7 +32,7 @@ export default function Sidebar({ albums }) {
         lg:translate-x-0
       `}>
         <div className="mb-8">
-          <h1 className="text-xl font-bold">📷 My Portfolio</h1>
+          <h1 className="text-xl font-bold">Menu</h1>
         </div>
 
         <nav className="space-y-2">
